@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="node_modules/editor.md/css/editormd.min.css" />
+
 </head>
 
 <body class="background-color">
@@ -22,11 +23,142 @@
                 </a>
             </nav>
         </header>
-        <section class="form-section">
-            <div class="input-group">
-                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-                <span class="input-group-text">$</span>
-                <span class="input-group-text">0.00</span>
+        <section class="form-section mt-3">
+            <div class="row">
+                <div class="col-md-8" id="main-features-section">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatProductName"
+                                    placeholder="Nombre del producto">
+                                <label for="floatProductName">Nombre del producto</label>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <div class="input-group mb-3">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="price-input"
+                                                placeholder="Precio">
+                                            <label for="price-input">Precio</label>
+                                        </div>
+                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text" id="formated-price">0.00</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="input-group mb-3">
+                                        <div class="form-floating ">
+                                            <input type="text" class="form-control" id="floatingInputGroup1"
+                                                placeholder="Precio" disabled>
+                                            <label for="floatingInputGroup1">Precio con descuento</label>
+                                        </div>
+                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text">0.00</span>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckDefault">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">
+                                            Habilitar descuento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-floating mt-4">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                    style="height: 100px"></textarea>
+                                <label for="floatingTextarea2">Descripción</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <div class="categorias">
+                                <p>Categoria</p>
+                                <div class="" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="btnradio1">Otros</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio2">Categoria 2</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio3">Categoria 3</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio4">Categoria 4</label>
+                                </div>
+                            </div>
+                            <div class="inventario mt-4">
+                                <form>
+                                    <div class="row mb-3">
+                                        <label for="SKU" class="col-sm-2 col-form-label">SKU</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="SKU">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="stock" class="col-sm-2 col-form-label">stock</label>
+                                        <div class="col-sm-10">
+                                            <input type="number" class="form-control" id="stock">
+                                        </div>
+                                    </div>
+                                    <fieldset class="row mb-3">
+                                        <legend class="col-form-label col-sm-2 pt-0">Habilitar producto</legend>
+                                        <div class="col-sm-10">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch"
+                                                    id="available-stock">
+                                                <label class="form-check-label" for="available-stock">
+                                                    Disponible</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="aside-features-section">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Imagen principal</h5>
+                            <figure class="mt-3" style="max-width: 432px; margin: 0 auto;">
+                                <img src="https://picsum.photos/200" class="img-fluid" alt="...">
+                            </figure>
+                            <div class="input-group mt-3">
+                                <input type="file" class="form-control" id="inputGroupFile04"
+                                    aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                <button class="btn btn-outline-danger" type="button"
+                                    id="inputGroupFileAddon04">X</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Galeria</h5>
+                            <div class="row">
+                                <div class="col-md-8 text-center img-card-container"
+                                    style="display: flex; justify-content: center; flex-direction: column;">
+                                    <img src="https://picsum.photos/32" class="img-fluid img-card" alt="..."
+                                        loading="lazy">
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Lorem ipsum...</p>
+                                </div>
+                            </div>
+                            <div class="input-group mt-3">
+                                <input type="file" class="form-control" id="inputGroupFile04"
+                                    aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -37,6 +169,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="node_modules/editor.md/editormd.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var editor = editormd("editor", {
+                // width: "100%",
+                // height: "100%",
+                // markdown: "xxxx",     // dynamic set Markdown text
+                path: "editor.md/lib/"  // Autoload modules mode, codemirror, marked... dependents libs path
+            });
+        });
+    </script>
+    <script src="src/formated-price.js"></script>
+    <script>
+        /* Enable and disble discount price
+        */
+        const checkbox = document.getElementById("flexSwitchCheckDefault");
+        const inputPrecio = document.getElementById("floatingInputGroup1");
+
+        checkbox.addEventListener("change", () => {
+            inputPrecio.disabled = !checkbox.checked;
+        });
+    </script>
 </body>
 
 </html>
