@@ -1,0 +1,29 @@
+{
+  "name": "cms-styles",
+  "version": "1.0.0",
+  "description": "web-site administrator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJSepulveda/cms-e-shop.git"
+  },
+  "keywords": [
+    "CRUD",
+    "css",
+    "html",
+    "javascript",
+    "markdown"
+  ],
+  "author": "yeiyeh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JJSepulveda/cms-e-shop/issues"
+  },
+  "homepage": "https://github.com/JJSepulveda/cms-e-shop#readme",
+  "dependencies": {
+    "editor.md": "^1.5.0"
+  }
+}
